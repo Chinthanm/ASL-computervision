@@ -1,6 +1,6 @@
 # ASL Image CLassification
 
-Analysis of the letters in the American Sign Language.
+End-to-end Machine Learning problem from ingestion and analysis of image dataset to development of a deep learning neural network to accurately classify images of American Sign Language hand gestures.
 
 ## Table of Contents
 
@@ -73,7 +73,7 @@ We now explore more robust neural network architectures which take advantage of 
 ### ResNet 50
 I decided to implement a 50 layer Residual Network (ResNet-50) which has been proven to perform well for image classification tasks. We modify the pre-defined base model defined by Keras to include a global average pooling later and a dropout later before our final dense prediction layer. The main purpose of these two layers is to reduce the number of trainable parameters in the model and hence reduce the overall variance in the model as a method of reducing the possibility of overfitting.
 
-This model's architecture is simple. It has a very deep stack of simple residual units in the middle with each residual unit composed of two convolutional layers without pooling layers. Since these CNN algorithms have deep layers, the key is to use residual learning. This type of learning is when the input (x) to the layers is also added to the output of layers higher in the stack of layers, which is referred to as skipped connections. A networks goals is to model the output h(x) but the skipped connection forces the network to model f(x) = h(x) - x. Each section of network layers that has a skip connection is considered a residual unit.
+This model's architecture is straight forward - it has a very deep stack of simple residual units in the middle with each residual unit composed of two convolutional layers without pooling layers. Since these CNN algorithms have deep layers, the key is to use residual learning. This type of learning is when the input (x) to the layers is also added to the output of layers higher in the stack of layers, which is referred to as skipped connections. A networks goals is to model the output h(x) but the skipped connection forces the network to model f(x) = h(x) - x. Each section of network layers that has a skip connection is considered a residual unit.
 
 <img width="1004" alt="Screen Shot 2019-11-06 at 10 28 07 AM" src="https://user-images.githubusercontent.com/40244616/68326372-297b9400-0080-11ea-866a-8d8e2584237d.png">
 
